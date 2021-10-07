@@ -29,7 +29,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="FRF-ey-fZY"/>
                                 </constraints>
-                                <state key="normal" title="Reqeust"/>
+                                <state key="normal" title="OK"/>
                                 <connections>
                                     <segue destination="cah-ev-Bdt" kind="show" id="Xlq-xe-Pe3"/>
                                 </connections>
@@ -39,6 +39,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeSearchText:" destination="BYZ-38-t0r" eventType="editingChanged" id="Ec9-BH-QTe"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-bi-VCW">
                                 <rect key="frame" x="83" y="206" width="59" height="21"/>
@@ -63,6 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mHE-M6-EzI"/>
                     <connections>
+                        <outlet property="btnOK" destination="fpg-09-Zbd" id="vaz-7J-020"/>
                         <outlet property="txtSearchName" destination="9ES-Ih-KTE" id="bWS-K5-u3a"/>
                     </connections>
                 </viewController>
@@ -88,7 +92,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="aqiCell" id="JEv-g8-lGI" customClass="AqiCollectionViewCell" customModule="ten7Wave" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="aqiCell" id="JEv-g8-lGI" customClass="searchuserCollectionViewCell" customModule="ten7Wave" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="93" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -122,7 +126,7 @@
                                             <outlet property="txtTitle" destination="aRF-5i-38n" id="d3j-eU-NLL"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="errorCell" id="2SY-HQ-rMl" customClass="AqiCollectionViewCell" customModule="ten7Wave" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="errorCell" id="2SY-HQ-rMl" customClass="searchuserCollectionViewCell" customModule="ten7Wave" customModuleProvider="target">
                                         <rect key="frame" x="94" y="0.0" width="93" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

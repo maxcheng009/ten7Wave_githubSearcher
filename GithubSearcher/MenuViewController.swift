@@ -10,7 +10,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource,UICollect
     @IBOutlet weak var btnPrev: UIBarButtonItem!
     @IBOutlet weak var btnNext: UIBarButtonItem!
     var page = 1
-    var per_page = 28
+    var per_page = 32
     var totolpage = 0
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -44,7 +44,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource,UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        if aqiArray != nil {
-            let cell = aqiCollectionView.dequeueReusableCell(withReuseIdentifier: "aqiCell", for: indexPath) as! AqiCollectionViewCell
+            let cell = aqiCollectionView.dequeueReusableCell(withReuseIdentifier: "aqiCell", for: indexPath) as! searchuserCollectionViewCell
         cell.txtTitle.text = aqiArray![indexPath.row].login!
            //
         cell.imgView.loadImageUsingCache(withUrl: aqiArray![indexPath.row].avatarUrl!)
@@ -65,7 +65,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource,UICollect
     
     @IBOutlet weak var aqiCollectionView: UICollectionView!
     var selectedRow = 0
-//    var timer: Timer!
     var refreshControl: UIRefreshControl!
     var aqiArray :[ten7waveItem]?
     
@@ -87,7 +86,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource,UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         //set delgates
         aqiCollectionView.dataSource = self
         aqiCollectionView.delegate = self
@@ -112,13 +111,11 @@ class MenuViewController: UIViewController, UICollectionViewDataSource,UICollect
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 	
    
-        if (segue.identifier == "userSelectSegue") {
-            let nextVC =  segue.destination as! DetailViewController
-//            nextVC.passDate = self.aqiArray?[selectedRow].date
-            nextVC.passHdurl = self.aqiArray?[selectedRow].avatarUrl
-//            nextVC.passTitle = self.aqiArray?[selectedRow].title
-            nextVC.passDescription = self.aqiArray?[selectedRow].login
-        }
+//        if (segue.identifier == "userSelectSegue") {
+//            let nextVC =  segue.destination as! DetailViewController
+//            nextVC.passHdurl = self.aqiArray?[selectedRow].avatarUrl
+//            nextVC.passDescription = self.aqiArray?[selectedRow].login
+//        }
         
     }
  
@@ -169,6 +166,11 @@ extension MenuViewController{
                                 print("totlalCount:",totalCount)
                                 self.totolpage = Int(totalCount / self.per_page) + 1
                                 print("totlpage:",self.totolpage)
+                                if self.totolpage <= 1
+                                {
+                                    self.btnPrev.isEnabled = false
+                                    self.btnNext.isEnabled = false
+                                }
                             }
 
                         } catch  {
@@ -178,13 +180,13 @@ extension MenuViewController{
                     }
     
           
-          guard let data = data else {
+          guard let _ = data else {
             print(String(describing: error))
             semaphore.signal()
             return
           }
-//          print(String(data: data, encoding: .utf8)!)
-          semaphore.signal()
+
+            semaphore.signal()
         }
 
         task.resume()

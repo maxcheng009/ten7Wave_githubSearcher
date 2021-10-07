@@ -16,8 +16,7 @@
 		CE08F4E0265257120062C5ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE08F4DE265257120062C5ED /* LaunchScreen.storyboard */; };
 		CE08F4EB265296290062C5ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08F4EA265296290062C5ED /* MenuViewController.swift */; };
 		CE9FCC792652C86F00BE3F95 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FCC782652C86F00BE3F95 /* ColumnFlowLayout.swift */; };
-		CE9FCC7B26539ED400BE3F95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FCC7A26539ED400BE3F95 /* DetailViewController.swift */; };
-		CED3BA0B2652A806004C2A32 /* AqiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BA0A2652A806004C2A32 /* AqiCollectionViewCell.swift */; };
+		CED3BA0B2652A806004C2A32 /* searchuserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3BA0A2652A806004C2A32 /* searchuserCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +31,7 @@
 		CE08F4DF265257120062C5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE08F4EA265296290062C5ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		CE9FCC782652C86F00BE3F95 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
-		CE9FCC7A26539ED400BE3F95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CED3BA0A2652A806004C2A32 /* AqiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqiCollectionViewCell.swift; sourceTree = "<group>"; };
+		CED3BA0A2652A806004C2A32 /* searchuserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchuserCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +68,10 @@
 				CE08F4D5265257100062C5ED /* AppDelegate.swift */,
 				CE08F4D7265257100062C5ED /* ViewController.swift */,
 				CE08F4EA265296290062C5ED /* MenuViewController.swift */,
-				CE9FCC7A26539ED400BE3F95 /* DetailViewController.swift */,
 				CE08F4D9265257100062C5ED /* Main.storyboard */,
 				CE08F4DC265257120062C5ED /* Assets.xcassets */,
 				CE08F4DE265257120062C5ED /* LaunchScreen.storyboard */,
-				CED3BA0A2652A806004C2A32 /* AqiCollectionViewCell.swift */,
+				CED3BA0A2652A806004C2A32 /* searchuserCollectionViewCell.swift */,
 				CE9FCC782652C86F00BE3F95 /* ColumnFlowLayout.swift */,
 				504A4C59270CADA400076A0A /* Info.plist */,
 			);
@@ -163,12 +160,11 @@
 			files = (
 				CE08F4D8265257100062C5ED /* ViewController.swift in Sources */,
 				CE9FCC792652C86F00BE3F95 /* ColumnFlowLayout.swift in Sources */,
-				CED3BA0B2652A806004C2A32 /* AqiCollectionViewCell.swift in Sources */,
+				CED3BA0B2652A806004C2A32 /* searchuserCollectionViewCell.swift in Sources */,
 				CE08F4D6265257100062C5ED /* AppDelegate.swift in Sources */,
 				50A862EC270CA36600DCF29A /* ten7waveGitHub.swift in Sources */,
 				50A862EB270CA36600DCF29A /* ten7waveItem.swift in Sources */,
 				CE08F4EB265296290062C5ED /* MenuViewController.swift in Sources */,
-				CE9FCC7B26539ED400BE3F95 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

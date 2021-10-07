@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AqiCollectionViewCell: UICollectionViewCell {
+class searchuserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var txtTitle: UILabel!
     
