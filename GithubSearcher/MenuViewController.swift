@@ -163,9 +163,9 @@ extension MenuViewController{
                                               }
                                 
                             if let totalCount = totalDicArray.totalCount {
-                                print("totlalCount:",totalCount)
+//                                print("totlalCount:",totalCount)
                                 self.totolpage = Int(totalCount / self.per_page) + 1
-                                print("totlpage:",self.totolpage)
+//                                print("totlpage:",self.totolpage)
                                 if self.totolpage <= 1
                                 {
                                     self.btnPrev.isEnabled = false
