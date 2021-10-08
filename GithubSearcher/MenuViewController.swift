@@ -158,7 +158,7 @@ extension MenuViewController{
                             self.aqiArray = totalDicArray.items
                             
                             DispatchQueue.main.async {
-                                                  //最後再重新讀取 tabelView 的資料一次
+                                                  //最後再重新讀取 collectionView 的資料一次
                                                   self.aqiCollectionView.reloadData()
                                               }
                                 
